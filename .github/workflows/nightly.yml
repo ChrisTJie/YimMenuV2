@@ -1,9 +1,9 @@
-name: Nightly Build
+name: Auto Build on Commit
 
 on:
-  schedule:
-    # cronjob that triggers every day at 2PM UTC
-    - cron: "0 14 * * *"
+  push:
+    branches:
+      - enhanced
   workflow_dispatch:
 
 concurrency:
