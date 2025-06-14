@@ -29,7 +29,7 @@ namespace YimMenu::Hooks
 {
 	namespace SwapChain
 	{
-		constexpr auto VMTPresentIdx       = 8;
+		constexpr auto VMTPresentIdx = 8;
 		constexpr auto VMTResizeBuffersIdx = 13;
 		extern HRESULT Present(IDXGISwapChain* that, UINT syncInterval, UINT flags);
 		extern HRESULT ResizeBuffers(IDXGISwapChain* that, UINT bufferCount, UINT width, UINT height, DXGI_FORMAT newFormat, UINT swapChainFlags);
@@ -77,5 +77,10 @@ namespace YimMenu::Hooks
 	namespace Window
 	{
 		extern LRESULT WndProc(HWND hwnd, UINT umsg, WPARAM wparam, LPARAM lparam);
+	}
+
+	namespace Misc
+	{
+		extern bool AssistedAimShouldReleaseEntity(__int64 a1);
 	}
 }
